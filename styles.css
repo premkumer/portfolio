@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    color: rgb(255, 255, 255);
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    text-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transform: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+
+}
+
+.navbar a:hover {
+    color: rgb(3, 205, 231);
+
+}
+
+
+/* home */
+
+.Home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 80px 10% 0;
+    background-image: url(templates/image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.Home-content {
+    max-width: 600px;
+    text-shadow: 20px 20px 20px rgba(199, 195, 195, 0.5);
+
+}
+
+.Home-content h3 {
+    font-size: 32px;
+
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.Home-content h3 span {
+    color: rgb(0, 174, 255);
+}
+
+.Home-content h2 {
+    font-size: 32px;
+
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.Home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.Home-content p {
+    font-size: 20px;
+    margin: 20px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+
+.Home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(0, 174, 255);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 174, 255);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.Home-sci a:hover {
+    background: rgb(0, 174, 255);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 174, 255, 0.5);
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(0, 174, 255);
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    letter-spacing: 1px;
+
+}
+
+.btn:hover {
+
+
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+
+}
+
+.about {
+    display: flex;
+    align-items: center;
+
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+@keyframes slideTop {
+    0% {
+        transform: translatey(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+
+.container-fluid {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-img img {
+    width: 80%;
+    border-radius: 8px;
+    height: auto;
+    max-width: 550px;
+    padding-bottom: 10%;
+}
+
+.about-content h2 {
+    font-size: 600px;
+
+
+
+}
+
+.about-content h2 span {
+    color: rgb(0, 174, 255);
+
+}
+
+.about-content h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    line-height: 1.7;
+    margin: 15px 0 30px;
+
+
+}
+
+.about-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    line-height: 1.7;
+    margin-bottom: 4rem;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+/* --- General Section Styling --- */
+section {
+    padding: 60px 0;
+    /* background-color: #000; */
+    color: #fff;
+    text-align: center;
+}
+
+/* Style the main heading */
+.heading1 {
+    font-size: clamp(1.8rem, 4vw, 2.5em);
+    margin-bottom: 50px;
+    color: rgba(0, 255, 238, 0.99);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+/* --- Technical Bars Container --- */
+.Technical-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 20px; /* Vertical and horizontal gap */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* --- Individual Skill Bar Styling --- */
+.bar {
+    width: clamp(250px, 45vw, 400px); /* Responsive width */
+    margin: 20px 0;
+    text-align: left;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(10, 10, 10, 0.5); /* Slight dark background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 255, 238, 0.1);
+}
+
+.bar i {
+    font-size: 1.8em;
+    margin-right: 15px;
+    vertical-align: middle;
+    /* Apply a subtle pulsation/shadow to the icon */
+    filter: drop-shadow(0 0 5px rgba(0, 245, 224, 0.7));
+}
+
+.bar .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 245, 224, 0.3);
+}
+
+/* --- Progress Line (Track) Styling --- */
+.progress-line {
+    position: relative;
+    height: 12px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    /* Initial state for the track animation */
+    transform: scaleX(0); 
+    transform-origin: left;
+    animation: track-scale-in 0.5s ease-out forwards;
+}
+
+/* Span inside progress-line is the actual filled bar */
+.progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00BFFF, rgba(0, 245, 224, 0.99)); /* Gradient fill */
+    
+    /* Crucial: Initial width is 0 for the fill animation */
+    width: 0%; 
+    
+    /* Smooth shadow effect on the filled bar */
+    box-shadow: 0 0 10px rgba(0, 245, 224, 0.8);
+}
+
+/* --- 1. Track Scale-In Animation (Applies to the whole progress-line container) --- */
+@keyframes track-scale-in {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* --- 2. Fill Animation Keyframes (Specific to each skill percentage) --- */
+/* The animation starts at 0% and ends at the target percentage */
+
+@keyframes html-fill { to { width: 90%; } }
+@keyframes css-fill { to { width: 90%; } }
+@keyframes JavaScript-fill { to { width: 70%; } }
+@keyframes BOOTSTRAP5-fill { to { width: 80%; } }
+@keyframes mysql-fill { to { width: 85%; } }
+@keyframes django-fill { to { width: 70%; } }
+@keyframes python-fill { to { width: 88%; } }
+
+/* --- 3. Applying the Fill Animations --- */
+.progress-line.html span { animation: html-fill 2s 0.5s ease-out forwards; }
+.progress-line.css span { animation: css-fill 2s 0.6s ease-out forwards; }
+.progress-line.JavaScript span { animation: JavaScript-fill 2s 0.7s ease-out forwards; }
+.progress-line.BOOTSTRAP5 span { animation: BOOTSTRAP5-fill 2s 0.8s ease-out forwards; }
+.progress-line.mysql span { animation: mysql-fill 2s 0.9s ease-out forwards; }
+.progress-line.django span { animation: django-fill 2s 1.0s ease-out forwards; }
+.progress-line.python span { animation: python-fill 2s 1.1s ease-out forwards; }
+
+/* The animation delay (e.g., 0.5s, 0.6s) staggers the bars for a cooler effect. */
+/* The `forwards` keyword ensures the bar stays at the final width. */
+
+
+/* --- Percentage Text Label Styling and Animation --- */
+
+.progress-line span::after {
+    position: absolute;
+    padding: 3px 6px;
+    background: rgba(0, 245, 224, 0.99);
+    color: #000;
+    font-size: 0.85em;
+    font-weight: 700;
+    border-radius: 5px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%) scale(0.5); /* Start small and transparent */
+    opacity: 0;
+    box-shadow: 0 0 5px rgba(0, 245, 224, 0.8);
+    
+    /* Apply the text fade and scale animation */
+    animation: text-pop-in 0.5s 2.5s ease-out forwards;
+}
+
+/* Setting the specific percentage text for each bar */
+.progress-line.html span::after { content: "90%"; }
+.progress-line.css span::after { content: "90%"; }
+.progress-line.JavaScript span::after { content: "70%"; }
+.progress-line.BOOTSTRAP5 span::after { content: "80%"; }
+.progress-line.mysql span::after { content: "85%"; }
+.progress-line.django span::after { content: "70%"; }
+.progress-line.python span::after { content: "88%"; }
+
+/* --- 4. Percentage Text Animation --- */
+@keyframes text-pop-in {
+    to {
+        transform: translateX(50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* contact */
+/* --- Root Variables for easy customization --- */
+:root {
+    --bg-color: #1f242d; /* Dark background */
+    --second-bg-color: #323946; /* Slightly lighter background for forms/cards */
+    --text-color: #fff; /* White text */
+    --main-color: #0ef; /* Cyan/Primary accent color */
+    --text-font: 'Poppins', sans-serif;
+}
+
+/* --- Basic Reset and Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- Contact Section Styling --- */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem; /* Space between text and form */
+    padding: 70px 10%;
+    min-height: 100vh;
+    background: var(--second-bg-color);
+}
+
+/* --- Contact Text Area --- */
+.contact-text h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.contact-text h2 span {
+    color: var(--main-color);
+}
+
+.contact-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    max-width: 400px; /* Limit paragraph width */
+}
+
+/* --- Contact List (Email/Phone) --- */
+.contact-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.contact-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the Boxicons (bx classes) */
+.contact-list li.bx { 
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+/* --- Social Icons --- */
+.contact-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    text-decoration: none;
+    margin-right: 15px;
+    transition: .5s ease;
+}
+
+.contact-icon a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* --- Contact Form Styling --- */
+.contact-form {
+    width: 100%;
+    max-width: 450px; /* Limit form width */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 16px;
+    resize: none; /* Prevent vertical resize for textarea */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* --- Button Styling --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--main-color);
+    border-radius: 40px;
+    box-shadow: 0 0 10px var(--main-color);
+    font-size: 16px;
+    color: var(--second-bg-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    background: var(--text-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+/* --- Responsive Design (Adjust layout for smaller screens) --- */
+@media (max-width: 991px) {
+    .contact {
+        flex-direction: column; /* Stack text and form vertically */
+        gap: 3rem;
+        padding: 50px 5%;
+    }
+
+    .contact-text h2 {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .contact-text p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-icon {
+        display: flex;
+        justify-content: center;
+    }
+}
